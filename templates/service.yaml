@@ -7,6 +7,6 @@ spec:
   selector:
     app: sample-go-web-app
   ports:
-    - nodePort: {{ Values.service.nodePort }} 
-      protocol: {{ Values.service.protocolType }} 
-      port: {{Values.service.port }} 
+    - nodePort: {{ .Values.service.nodePort }} 
+      protocol: {{ .Values.service.protocolType }} 
+      port:     {{ .Values.service.port }} 

@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: sample-service
 spec:
-  type: {{ Values.serviceType }}
+  type: {{ Values.service.serviceType }}
   selector:
     app: sample-go-web-app
   ports:

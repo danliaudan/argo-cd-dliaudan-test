@@ -1,10 +1,9 @@
 deployment:
-  numReplicas:   5
-  dockerImage:   docker.io/kostiscodefresh/gitops-simple-app:v2.0
+  numReplicas: 4
+  dockerImage: docker.io/kostiscodefresh/gitops-simple-app:v2.0
   containerPort: 8080
-
 service:
-  serviceType:  NodePort
-  nodePort:     31000
+  serviceType: NodePort
+  nodePort: 31000
   protocolType: TCP
-  port:         8080
+  port: 8080

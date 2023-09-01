@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: sample-deployment-replicas
 spec:
-  replicas: 2
+  replicas: {{ Values.deployment.numReplicas }}
   selector:
     matchLabels:
       app: sample-go-web-app
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: webserver-simple
-          image: docker.io/kostiscodefresh/gitops-simple-app:v4.0
+          image: {{ Values.deployment.dockerImage }} 
           ports:
-            - containerPort: 8080
+            - containerPort: {{ Values.deployment.containerPort }}
